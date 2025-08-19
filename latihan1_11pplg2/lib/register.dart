@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'custom.dart';
+import 'package:latihan1_11pplg2/reusable/custom.dart';
+
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -25,12 +26,13 @@ class _RegisterState extends State<Register> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            custom(label: "Nama", controller: txtname),
-            custom(label: "Email", controller: txtemail),
+            custom(label: "Nama", controller: txtname, mytextcolor: Colors.green,),
+            custom(label: "Email", controller: txtemail, mytextcolor: Colors.blue,),
             custom(
               label: "Password",
               controller: txtpassword,
               obscure: true,
+              mytextcolor: Colors.red,
             ),
             Text('jenis kelamin'),
             DropdownButton<String>(

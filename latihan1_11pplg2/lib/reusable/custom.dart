@@ -4,12 +4,14 @@ class custom extends StatelessWidget {
   final String label;
   final TextEditingController controller;
   final bool obscure;
+  final Color mytextcolor;
 
   const custom({
     super.key,
     required this.label,
     required this.controller,
     this.obscure = false,
+    required this.mytextcolor,
   });
 
   @override
@@ -23,7 +25,9 @@ class custom extends StatelessWidget {
           labelText: label,
           border: const OutlineInputBorder(),
         ),
+        style: TextStyle(color: mytextcolor),
       ),
     );
+      
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'register.dart';
 
+
 class loginpage extends StatefulWidget {
   const loginpage({super.key});
   
@@ -8,6 +9,8 @@ class loginpage extends StatefulWidget {
   @override
   State<loginpage> createState() => _loginpageState();
 }
+
+
 
 class _loginpageState extends State<loginpage> {
   
@@ -86,6 +89,7 @@ class _loginpageState extends State<loginpage> {
     );
   },
   child: const Text("daftar disini jika belum punya akun"),
+  
 ),
 
           ],
