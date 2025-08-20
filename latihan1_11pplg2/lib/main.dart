@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:latihan1_11pplg2/routes/page.dart';
-import 'package:latihan1_11pplg2/routes/routes.dart';
-
-
-
+import 'package:latihan1_11pplg2/routes/page.dart';   // berisi AppPages
+import 'package:latihan1_11pplg2/routes/routes.dart'; // berisi AppRoutes
 
 void main() {
   runApp(const MyApp());
@@ -13,13 +10,13 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: AppRoutes.calculatorpage,
-      getPages: AppPage.pages,
+      title: 'BottomNav GetX',
+      debugShowCheckedModeBanner: false,
+      initialRoute: AppRoutes.homepage, 
+      getPages: AppPage.pages,     
     );
   }
 }
-

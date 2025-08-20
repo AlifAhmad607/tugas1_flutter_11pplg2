@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:latihan1_11pplg2/controller/kalkulator.dart';
-import 'package:latihan1_11pplg2/footballpage.dart';
+import 'package:latihan1_11pplg2/pages/footballpage.dart';
 import 'package:latihan1_11pplg2/reusable/custom_button.dart';
 
 
 class CalculatorPage extends StatelessWidget {
+  
   final String hasil;
   CalculatorPage({super.key, required this.hasil});
 
@@ -16,6 +17,7 @@ class CalculatorPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       appBar: AppBar(title: Text("Calculator")),
       body: Container(
         child: Column(

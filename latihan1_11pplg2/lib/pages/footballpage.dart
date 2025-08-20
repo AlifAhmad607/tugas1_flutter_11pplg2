@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:latihan1_11pplg2/controller/footbalplayercontroller.dart';
-import 'routes/routes.dart';
+import '../routes/routes.dart';
 
 class Footballpage extends StatelessWidget{
   Footballpage({super.key});

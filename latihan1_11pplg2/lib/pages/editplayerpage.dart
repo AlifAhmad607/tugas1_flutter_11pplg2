@@ -7,8 +7,6 @@ import 'package:latihan1_11pplg2/controller/EditPlayercontroller.dart';
 
 class Editplayerpage extends StatelessWidget {
 
-    final int index;
-    Editplayerpage({required this.index});
 
     final Editplayercontroller editplayercontroller = Get.put(Editplayercontroller());
     
@@ -17,6 +15,7 @@ class Editplayerpage extends StatelessWidget {
     final TextEditingController nomorController = TextEditingController();
 
      @override
+     final index = Get.arguments as int;
     Widget build(BuildContext context) {
     final player = editplayercontroller.players[index];
     namaController.text = player.nama;
