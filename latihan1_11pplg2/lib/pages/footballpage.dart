@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:latihan1_11pplg2/controller/footbalplayercontroller.dart';
+import 'package:latihan1_11pplg2/modelplayer.dart';
 import '../routes/routes.dart';
 
 class Footballpage extends StatelessWidget{
@@ -19,10 +20,18 @@ class Footballpage extends StatelessWidget{
           itemCount: footbalplayercontroller.players.length,
           itemBuilder: (context, index){
             return ListTile(
-              onTap: (){
-                Get.toNamed(AppRoutes.editplayerpage, arguments: index);
-              },
-              title: Text(footbalplayercontroller.players[index]),
+              onTap: () {
+    Get.toNamed(AppRoutes.editplayerpage, arguments: index);
+  },
+  leading: CircleAvatar(
+    backgroundImage: AssetImage(footbalplayercontroller.players[index].images),
+  ),
+  title: Text(footbalplayercontroller.players[index].nama),
+  subtitle: Text(footbalplayercontroller.players[index].posisi),
+  trailing: Text(
+    footbalplayercontroller.players[index].nomorPunggung.toString(),
+  ),
+  
             );
           }
         ))

@@ -19,9 +19,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Obx(() => Scaffold(
-      body: pages[navController.currentIndex.value],
+      body: pages[navController.selectedIndex.value],
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: navController.currentIndex.value,
+        currentIndex: navController.selectedIndex.value,
         onTap: navController.changePage,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.calculate), label: 'Kalkulator'),

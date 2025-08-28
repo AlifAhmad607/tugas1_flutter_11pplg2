@@ -1,39 +1,46 @@
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:latihan1_11pplg2/controller/footbalplayercontroller.dart';
 import 'package:latihan1_11pplg2/modelplayer.dart';
 
 class Editplayercontroller extends GetxController {
-  var players = <Player>[
-    Player(
-      nama: 'Rashford',
-      posisi: 'Forward',
-      nomorPunggung: 10,
-      
-    ),
-    Player(
-      nama: 'Bruno Fernandes',
-      posisi: 'Forward',
-      nomorPunggung: 7,
-      
-    ),
-    Player(
-      nama: 'Casemiro',
-      posisi: 'Forward',
-      nomorPunggung: 7,
-      
-    ),
-    Player(
-      nama: 'Varane',
-      posisi: 'Forward',
-      nomorPunggung: 7,
-      
-    ),
-  ].obs;
+  final nama = TextEditingController();
+  final posisi = TextEditingController();
+  final nomor = TextEditingController();
+  final gambar = TextEditingController();
 
-  void updatePlayer(int index, String namaBaru, String posisiBaru, int nomorBaru) {
-    players[index].nama = namaBaru;
-    players[index].posisi = posisiBaru;
-    players[index].nomorPunggung = nomorBaru;
-    update(); // untuk memicu refresh jika pakai GetBuilder
-    players.refresh(); // kalau pakai Obx
+  final playerController = Get.find<Footbalplayercontroller>();
+  late int index;
+  
+
+   void onInit() {
+    super.onInit();
+    index = Get.arguments as int;
+
+    final player = playerController.players[index];
+    nama.text = player.nama;
+    posisi.text = player.posisi;
+    nomor.text = player.nomorPunggung.toString();
+  }
+
+  void save() {
+    playerController.updatePlayer(
+      index,
+      Player(
+        nama: nama.text,
+        posisi: posisi.text,
+        nomorPunggung: int.parse(nomor.text),
+        images: playerController.players[index].images,
+      ),
+       
+    );
+    Get.back();
+  }
+     void onClose() {
+    nama.dispose();
+    posisi.dispose();
+    nomor.dispose();
+    super.onClose();
   }
 }
+  
