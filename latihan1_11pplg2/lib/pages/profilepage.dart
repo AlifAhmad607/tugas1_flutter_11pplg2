@@ -31,7 +31,7 @@ class ProfilePage extends StatelessWidget {
               controller.name.value,
               style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             )),
-            const SizedBox(height: 8),
+            const SizedBox(height: 10),
 
             
             Obx(() => Text(

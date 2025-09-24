@@ -12,7 +12,6 @@ class Editplayercontroller extends GetxController {
   final playerController = Get.find<Footbalplayercontroller>();
   late int index;
   
-
    void onInit() {
     super.onInit();
     index = Get.arguments as int;
