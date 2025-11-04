@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "733954769873",
+    "project_id": "flutterpushnotification-ec867",
+    "storage_bucket": "flutterpushnotification-ec867.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733954769873:android:7e10f22dbf9200f84c16f0",
+        "android_client_info": {
+          "package_name": "com.example.latihan1_11pplg2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbsptE2ErcG2RPZET76a0TNbj59MVjoa4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
